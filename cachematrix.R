@@ -46,7 +46,7 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(m)
   }
-  ## Return a matrix that is the inverse of 'x', if input matrix data changed
+  ## Return a matrix that is the inverse of 'x', if input matrix data has changed
   data <- x$get()
   m <- solve(data, ...)
   x$setInv(m)
