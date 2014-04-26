@@ -1,11 +1,11 @@
-## Matrix inversion is usually repeatitive and time consuming process.
-## The aim of fucntions is to creates a special "matrix" object that can cache its inverse.
+## Matrix inversion is usually a repeatitive and time consuming process.
+## The aim of fucntions are to creates a special "matrix" object that can cache its inverse.
 ## Then it computes the inverse of the special "matrix" returned,  if the inverse has already been calculated
 ## and input matrix data has not changed, then it retrieve the inverse from the cache.
  
 ## Assumption: Input marix should be square matrix to compute its inverse without error.
 
-## makeCacheMatrix creates a special "vector", which is really a list containing four fucntions 
+## makeCacheMatrix creates a special "matrix", which is really a list containing four fucntions 
 ## input for second function.
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -33,7 +33,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve calculates the inverse of the input Matrix created 
+## with the above function and returns the nverse of the input matrix. But first checks
+## to see if the inverse has already been calculated and data has not changed, if yes, 
+## then skips the computation and returns inverse matrix from cache saved by first fucntion.
 
 cacheSolve <- function(x, ...) {
   ## Look for cache data and return inverse matrix, if found
