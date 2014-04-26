@@ -5,17 +5,28 @@
  
 ## Assumption: Input marix should be square matrix to compute its inverse without error.
 
-## makeCacheMatrix creates a special "vector", which is really a list containing four fucntions input for second function.
+## makeCacheMatrix creates a special "vector", which is really a list containing four fucntions 
+## input for second function.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
+  
+  ## set the value of the matrix
   set <- function(y) {
     x <<- y
     m <<- NULL
   }
+  
+  ## get the value of the matrix
   get <- function() x
+  
+  ## set the value of the inverse matrix
   setInv <- function(solve) m <<- solve
+  
+  ## Solve and get the value of the inverse matrix
   getInv <- function() m
+  
+  ## Create output list for second fucntion
   list(set = set, get = get,
        setInv = setInv,
        getInv = getInv)
