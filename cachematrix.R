@@ -1,3 +1,4 @@
+## ## Matrix inversion is usually is time consuming process, 
 ## function, makeVector creates a special "vector", which is really a list containing a function to 
 ## functions d
 
@@ -21,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
-        ## Look for cache data and return inverse matrix, if found
+  ## Look for cache data and return inverse matrix, if found
 cacheSolve <- function(x, ...) {
   m <- x$getInv()
   if(!is.null(m)) {
