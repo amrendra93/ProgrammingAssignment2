@@ -1,6 +1,9 @@
 ## ## Matrix inversion is usually is time consuming process, 
-## function, makeVector creates a special "vector", which is really a list containing a function to 
-## functions d
+## The aim of fucntions is to creates a special "matrix" object that can cache its inverse.
+## Then it computes the inverse of the special "matrix" returned,  if the inverse has already been calculated
+## and input matrix data has not changed, then it retrieve the inverse from the cache.
+ 
+## Assumption: Input marix should be square matrix to compute its inverse without error.
 
 ## Write a short comment describing this function
 
